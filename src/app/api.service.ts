@@ -11,16 +11,7 @@ export class ApiService {
   userList;
 
   getUsers() { 
-    this.http.get('https://d53ae1ecdc92.ngrok.io/apolo/userList').subscribe(
-      data  => {
-        console.log("POST Request is successful ", data);
-        this.userList = data;
-      },
-      error  => {
-      console.log("Error", error);
-      }
-    )
-    return this.userList;
+    return this.http.get(this.baseUrl + '/userList');
   }
 
   getUserById(id: number){

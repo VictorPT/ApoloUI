@@ -17,8 +17,20 @@ export class UserListComponent implements OnInit {
   constructor(private router: Router, private apiService: ApiService, private http: HttpClient) { }
 
   ngOnInit() {
-    this.users = this.apiService.getUsers();
+    this.apiService.getUsers().subscribe(
+      data  => {
+        console.log("POST Request is successful ", data);
+        this.userList = data;
+        this.users = this.userList;
+      },
+      error  => {
+        console.log("Error", error);
+      } 
+    )
+  }
+
+  addUser() {
+    
   }
  
-
 }
