@@ -9,10 +9,11 @@ import { ApiService } from './api.service';
 
 import { routing } from "./app.routing";
 import { ReactiveFormsModule } from "@angular/forms";
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, routing, ReactiveFormsModule ],
-  declarations: [ AppComponent, UserListComponent ],
+  declarations: [ AppComponent, UserListComponent, AddUserComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ ApiService ]
 })
