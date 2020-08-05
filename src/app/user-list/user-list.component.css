@@ -1,0 +1,23 @@
+body {
+  font: normal medium/1.4 sans-serif;
+}
+table {
+  margin-left:auto; 
+  margin-right:auto;
+}
+th, td {
+  padding: 0.25rem;
+  text-align: left;
+  border: 1px solid rgb(3, 3, 3);
+}
+tbody tr:hover {
+  background: #23b2cf;
+}
+
+.user-container{
+  width: 80%;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+

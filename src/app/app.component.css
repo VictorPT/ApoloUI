@@ -1,3 +1,8 @@
 p {
   font-family: Lato;
 }
+
+h1 {
+  background:#23b2cf;
+  padding-left: 50px;
+}

@@ -25,6 +25,10 @@ export class AddUserComponent implements OnInit {
 
   }
 
+  goHome(){
+    this.router.navigate(['']);
+  }
+
   onSubmit() {
     this.apiService.createUser(this.addForm.value)
       .subscribe( data => {
