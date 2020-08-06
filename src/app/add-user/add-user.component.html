@@ -3,16 +3,16 @@
   <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
   
     <label for="userName">Nombre</label><br>
-    <input type="text" formControlName="userName" placeholder="Name" name="userName" class="form-control" id="userName"><br>
+    <input type="text" (paste)="omitSpecialChar($event)" (keypress)="omitSpecialChar($event)" formControlName="userName" placeholder="Name" name="userName" class="form-control" id="userName"><br>
     
     <label for="userEmail">E-Mail</label><br>
-    <input type="text" formControlName="userEmail" placeholder="E-mail" name="userEmail" class="form-control" id="userEmail"><br>
+    <input type="text" (paste)="omitSpecialChar($event)" (keypress)="omitSpecialChar($event)" formControlName="userEmail" placeholder="E-mail" name="userEmail" class="form-control" id="userEmail"><br>
     
     <label for="userAddress">Direccion</label><br>
-    <input type="text" formControlName="userAddress" placeholder="Direccion" name="userAddress" class="form-control" id="userAddress"><br>
+    <input type="text" (paste)="omitSpecialChar($event)" (keypress)="omitSpecialChar($event)" formControlName="userAddress" placeholder="Direccion" name="userAddress" class="form-control" id="userAddress"><br>
    
     <label for="userPhone">Telefono</label><br>
-    <input type="text" formControlName="userPhone" placeholder="Telefono" name="userPhone" class="form-control" id="userPhone"><br>
+    <input type="text" (paste)="omitSpecialChar($event)" (keypress)="omitSpecialChar($event)" formControlName="userPhone" placeholder="Telefono" name="userPhone" class="form-control" id="userPhone"><br>
 
     <button type="submit">Registrar</button><br>
   </form>

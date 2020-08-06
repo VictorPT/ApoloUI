@@ -33,7 +33,16 @@ export class AddUserComponent implements OnInit {
     this.apiService.createUser(this.addForm.value)
       .subscribe( data => {
         this.router.navigate(['']);
+      },
+      error  => {
+        console.log("Error", error);
       });
+  }
+
+  omitSpecialChar(event){
+    var k;  
+    k = event.keyCode; 
+    return((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 44 || k == 46 || k == 32 || (k >= 48 && k <= 57));
   }
 
 }
