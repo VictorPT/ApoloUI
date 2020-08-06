@@ -7,7 +7,7 @@ import {Observable} from "rxjs/index";
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  baseUrl: string = 'https://a708f679ef5b.ngrok.io/apolo';
+  baseUrl: string = 'https://6e30e9c27a0c.ngrok.io/apolo';
   userList;
 
   getUsers() { 

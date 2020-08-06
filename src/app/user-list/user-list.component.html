@@ -12,15 +12,16 @@
       </tr>
     </thead>
     <tbody>
+      <td colspan="5" style="text-align:center" *ngIf="!users.length">No existen usuarios registrados</td>
       <tr *ngFor="let user of users">
         <td class="block">{{user.userId}}</td>
         <td class="block">{{user.userName}}</td>
         <td class="block">{{user.userEmail}}</td>
         <td class="block">{{user.userAddress}}</td>
         <td class="block">{{user.userPhone}}</td>
-        <td *ngIf="user"><button (click)="deleteUser(user.userId)">Eliminar</button></td>
-      </tr>
-    </tbody>
+        <td *ngIf="user"><button (click)="deleteUser(user.userId)">Eliminar</button></td>   
+      </tr>    
+    </tbody>   
     <br>
     <button (click)="addUser()">Registrar</button>
   </table>
