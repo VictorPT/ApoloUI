@@ -1,12 +1,12 @@
 <div class="user-container">
   <h2 style="margin: auto; text-align: center;">Registro de Usuario</h2>
-  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <form name="myForm" [formGroup]="addForm" (ngSubmit)="onSubmit()">
   
     <label for="userName">Nombre</label><br>
     <input type="text" (paste)="omitSpecialChar($event)" (keypress)="omitSpecialChar($event)" formControlName="userName" placeholder="Name" name="userName" class="form-control" id="userName"><br>
     
     <label for="userEmail">E-Mail</label><br>
-    <input type="text" (paste)="omitSpecialChar($event)" (keypress)="omitSpecialChar($event)" formControlName="userEmail" placeholder="E-mail" name="userEmail" class="form-control" id="userEmail"><br>
+    <input type="email" (paste)="omitSpecialChar($event)" (keypress)="omitSpecialChar($event)" formControlName="userEmail" placeholder="E-mail" name="userEmail" class="form-control" id="userEmail"><br>
     
     <label for="userAddress">Direccion</label><br>
     <input type="text" (paste)="omitSpecialChar($event)" (keypress)="omitSpecialChar($event)" formControlName="userAddress" placeholder="Direccion" name="userAddress" class="form-control" id="userAddress"><br>
