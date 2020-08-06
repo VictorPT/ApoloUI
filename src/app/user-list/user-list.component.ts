@@ -19,7 +19,7 @@ export class UserListComponent implements OnInit {
   ngOnInit() {
     this.apiService.getUsers().subscribe(
       data  => {
-        console.log("POST Request is successful ", data);
+        console.log("Get user list is successful ", data);
         this.userList = data;
         this.users = this.userList;
       },
@@ -31,6 +31,15 @@ export class UserListComponent implements OnInit {
 
   addUser() {
     this.router.navigate(['add-user']);
+  }
+
+  deleteUser(userId){
+    this.apiService.deleteUser(userId).subscribe(
+      data=> {
+        console.log("Delete performed", data)
+        this.ngOnInit()
+      }
+    );
   }
  
 }

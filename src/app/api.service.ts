@@ -7,7 +7,7 @@ import {Observable} from "rxjs/index";
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  baseUrl: string = 'https://3b197edeb41e.ngrok.io/apolo';
+  baseUrl: string = 'https://a708f679ef5b.ngrok.io/apolo';
   userList;
 
   getUsers() { 
@@ -23,6 +23,6 @@ export class ApiService {
   }
 
   deleteUser(id: number){
-    return this.http.delete(this.baseUrl + id);
+    return this.http.delete(this.baseUrl + '/deleteUser/' + id);
   }
 }

@@ -9,6 +9,7 @@
         <th>E-Mail</th>
         <th>Direccion</th>
         <th>Telefono</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@
         <td class="block">{{user.userEmail}}</td>
         <td class="block">{{user.userAddress}}</td>
         <td class="block">{{user.userPhone}}</td>
+        <td *ngIf="user"><button (click)="deleteUser(user.userId)">Eliminar</button></td>
       </tr>
     </tbody>
     <br>
